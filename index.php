@@ -4,7 +4,7 @@ require_once('connection.php');
 
 $q = $_GET['q'];
 
-if( isset($q) && $q ){
+if( isset($q) && $q ) {
     $stmt = $pdo->prepare('SELECT * FROM books WHERE is_deleted=0 AND title LIKE :q');
     $stmt->execute(['q' => "%{$q}%"]);
 } else {
@@ -23,10 +23,10 @@ if( isset($q) && $q ){
 <body>
 
     <nav style="display: flex; justify-content: space-between;">
-        <a href="add_author.php">Lisa autor</a>
 
+        <a href="add_author.php">Lisa autor</a>
         <form action="index.php" method="get">
-            <input type="text" name="q" placeholder="Otsing">
+            <input type="text" name="q" placeholder="Otsing" value="<?=$q;?>">
             <input type="submit" value="Otsi">
         </form>
     </nav>

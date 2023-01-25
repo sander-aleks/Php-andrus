@@ -1,7 +1,12 @@
 <?php
 
-$host = 'd110071.mysql.zonevs.eu';
-$db   = 'd110071_raamatud';
-$user = 'd110071_raamatud';
-$pass = 'Emmekodu17';
-$charset = 'utf8mb4';
+return [
+    'database' => [
+        'host' => 'd110071.mysql.zonevs.eu',
+        'db' => 'd110071_oop',
+        'user' => 'd110071_oop',
+        'passwd' => 'Emmekodu18',
+        'charset' => 'utf8mb4',
+    ]
+];
+
